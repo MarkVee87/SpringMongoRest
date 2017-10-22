@@ -3,7 +3,7 @@ package hello.Models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-// Define the mongo collection you want to store these objects in
+// Define the readMongo collection you want to store these objects in
 @Document(collection = "marks_collection")
 public class Person {
 

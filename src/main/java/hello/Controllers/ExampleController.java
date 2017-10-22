@@ -18,8 +18,8 @@ public class ExampleController {
     @Autowired
     private PersonRepository repository;
 
-    @RequestMapping("/mongo")
-    public List<Person> mongo() throws IOException {
+    @RequestMapping("/readDBPersonObjects")
+    public List<Person> readMongo() throws IOException {
         people = new ArrayList<>();
 
         for (Person person : repository.findAll()) {
@@ -33,7 +33,7 @@ public class ExampleController {
 
         Person newPerson = new Person(firstName, lastName);
         repository.save(newPerson);
-        return mongo();
+        return readMongo();
     }
 
     @RequestMapping("/deletePerson")
@@ -44,6 +44,6 @@ public class ExampleController {
                 repository.delete(person);
             }
         }
-        return mongo();
+        return readMongo();
     }
 }

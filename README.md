@@ -10,6 +10,10 @@ curl -i -X POST -H "Content-Type:application/json" -d "{  \"firstName\" : \"Frod
 
 curl -i -X POST -H "Content-Type:application/json" -d "{  \"firstName\" : \"Bob\",  \"lastName\" : \"Carrot\" }" http://localhost:8080/people
 
+To view all 'Person' objects in local BD by URL:
+
+http://localhost:8080/readDBPersonObjects
+
 To add 'Person' objects to local DB by URL:
 
 http://localhost:8080/addPerson?firstName=someFirstName&lastName=someLastName
