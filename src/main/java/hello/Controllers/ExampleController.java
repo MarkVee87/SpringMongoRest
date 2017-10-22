@@ -19,7 +19,7 @@ public class ExampleController {
     private PersonRepository repository;
 
     @RequestMapping("/readDBPersonObjects")
-    public List<Person> readMongo() throws IOException {
+    private List<Person> readMongo() throws IOException {
         people = new ArrayList<>();
 
         for (Person person : repository.findAll()) {
