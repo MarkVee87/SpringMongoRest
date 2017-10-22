@@ -14,3 +14,7 @@ To add 'Person' objects to local DB by URL:
 
 http://localhost:8080/addPerson?firstName=someFirstName&lastName=someLastName
 
+To delete 'Person' objects in local DB by URL:
+
+http://localhost:8080/deletePerson?firstName=someFirstName&lastName=someLastName
+
