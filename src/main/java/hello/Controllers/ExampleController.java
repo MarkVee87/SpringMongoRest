@@ -35,4 +35,15 @@ public class ExampleController {
         repository.save(newPerson);
         return mongo();
     }
+
+    @RequestMapping("/deletePerson")
+    public List<Person> deletePerson(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName) throws IOException {
+
+        for (Person person : repository.findAll()) {
+            if(person.getFirstName().equals(firstName) && person.getLastName().equals(lastName)){
+                repository.delete(person);
+            }
+        }
+        return mongo();
+    }
 }
