@@ -3,6 +3,7 @@ package hello.Controllers;
 import hello.Models.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
@@ -25,5 +26,16 @@ public class ExampleController {
             people.add(person);
         }
         return people;
+    }
+
+    //    http://localhost:8080/addPerson?firstName=Mark&lastName=Saladadadadady
+    @RequestMapping("/addPerson")
+    public List<Person> addPerson(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName) throws IOException {
+        Person newPerson = new Person();
+        newPerson.setFirstName(firstName);
+        newPerson.setLastName(lastName);
+
+        repository.save(newPerson);
+        return mongo();
     }
 }
