@@ -33,6 +33,6 @@ spring.data.mongodb.port=27017
 
 spring.data.mongodb.database=dbname
 
-spring.data.mongodb.username=usernamr
+spring.data.mongodb.username=username
 
 spring.data.mongodb.password=******
