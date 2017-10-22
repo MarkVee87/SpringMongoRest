@@ -22,3 +22,17 @@ To delete 'Person' objects in local DB by URL:
 
 http://localhost:8080/deletePerson?firstName=someFirstName&lastName=someLastName
 
+
+### Mongo local config (src/main/resources/application.properties)
+
+Alter the below accoring to your needs, in my example I'm defaulting to localhost:27017 and setting only the DB Name in this file
+
+spring.data.mongodb.host=<hostname> 
+
+spring.data.mongodb.port=27017 
+
+spring.data.mongodb.database=<dbname>
+
+spring.data.mongodb.username=<usernamr>
+
+spring.data.mongodb.password=******
