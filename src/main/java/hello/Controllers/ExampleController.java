@@ -28,7 +28,6 @@ public class ExampleController {
         return people;
     }
 
-    //    http://localhost:8080/addPerson?firstName=Mark&lastName=Saladadadadady
     @RequestMapping("/addPerson")
     public List<Person> addPerson(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName) throws IOException {
         Person newPerson = new Person();
