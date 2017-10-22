@@ -30,10 +30,8 @@ public class ExampleController {
 
     @RequestMapping("/addPerson")
     public List<Person> addPerson(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName) throws IOException {
-        Person newPerson = new Person();
-        newPerson.setFirstName(firstName);
-        newPerson.setLastName(lastName);
 
+        Person newPerson = new Person(firstName, lastName);
         repository.save(newPerson);
         return mongo();
     }
